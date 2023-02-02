@@ -1,6 +1,8 @@
 <template>
   <v-app>
-    <Nuxt/>
+    <v-container>
+      <Nuxt />
+    </v-container>
   </v-app>
 </template>
 
@@ -8,9 +10,7 @@
 export default {
   name: 'YoutubeBland',
   data() {
-    return {
-
-    };
+    return {}
   },
-};
+}
 </script>

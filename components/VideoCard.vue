@@ -2,7 +2,7 @@
   <v-container>
     <v-row>
       <v-col v-for="item in getYoutube.items" :key="item.id" cols="3">
-        <v-card  v-ripple :to="`www.youtube.com/watch?v=${item.id}`" target="_blank" class="ma-2" max-height="400px">
+        <v-card  v-ripple :to="`www.youtube.com/watch?v=${item.id}`" target="_blank" class="ma-1" max-height="400px">
           <v-img
             :src="item.snippet.thumbnails.high.url"
             :width="item.snippet.thumbnails.medium.width"
@@ -14,7 +14,7 @@
                 <v-avatar>
                   <img
                     :src="item.snippet.thumbnails.high.url"
-                    alt="John"
+                     alt="John"
                   />
                 </v-avatar>
               </v-col>
@@ -36,6 +36,9 @@ export default {
   computed: {
     getYoutube() {
       return this.$store.state.youtube.youtubeAPI
+    },
+    getChannel() {
+      return this.$store.state.youtube.channel
     },
   },
 }
